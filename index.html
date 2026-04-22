@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Mérida | DaCodes</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; color: white; padding: 30px; margin-bottom: 20px; }
+        .header h1 { font-size: 36px; margin-bottom: 10px; }
+        .header p { opacity: 0.9; font-size: 16px; }
+        .card { background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-bottom: 20px; overflow: hidden; }
+        .card-title { background: #f8f9fa; padding: 15px 20px; font-weight: 600; color: #333; border-bottom: 1px solid #eee; font-size: 18px; }
+        .card-body { padding: 20px; }
+        
+        .weather-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .weather-day { text-align: center; padding: 15px; background: #f8f9fa; border-radius: 10px; }
+        .weather-day .day { font-weight: bold; color: #667eea; margin-bottom: 8px; }
+        .weather-day .temp { font-size: 20px; font-weight: bold; color: #333; }
+        .weather-day .condition { font-size: 13px; color: #666; margin-top: 5px; }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+        .stat-box { background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 20px; border-radius: 10px; text-align: center; }
+        .stat-number { font-size: 32px; font-weight: bold; color: #667eea; }
+        .stat-label { font-size: 14px; color: #666; margin-top: 5px; }
+        
+        .news-list { list-style: none; }
+        .news-list li { padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+        .news-list li:last-child { border-bottom: none; }
+        .news-item { display: flex; align-items: center; gap: 10px; }
+        .news-icon { font-size: 20px; }
+        .news-text { color: #333; font-size: 14px; }
+        
+        .footer { text-align: center; padding: 20px; color: white; opacity: 0.8; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌴 Dashboard Mérida</h1>
+            <p>Información actualizada • 22 Abril 2026</p>
+        </div>
+        
+        <div class="card">
+            <div class="card-title">📊 Estadísticas Clave</div>
+            <div class="card-body">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">1,276,270</div>
+                        <div class="stat-label">Habitantes (2026)</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">1.43%</div>
+                        <div class="stat-label">Crecimiento Anual</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">2,528,249</div>
+                        <div class="stat-label">Población Yucatán</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">18,040</div>
+                        <div class="stat-label">Nuevos residentes/año</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-title">🌤️ Clima - Próximos 7 días</div>
+            <div class="card-body">
+                <div class="weather-grid">
+                    <div class="weather-day">
+                        <div class="day">Hoy 22</div>
+                        <div class="temp">30-36°C</div>
+                        <div class="condition">☀️ Soleado</div>
+                    </div>
+                    <div class="weather-day">
+                        <div class="day">Jue 23</div>
+                        <div class="temp">30-36°C</div>
+                        <div class="condition">⛈️ Lluvias aisladas</div>
+                    </div>
+                    <div class="weather-day">
+                        <div class="day">Vie 24</div>
+                        <div class="temp">31-38°C</div>
+                        <div class="condition">☀️ Soleado</div>
+                    </div>
+                    <div class="weather-day">
+                        <div class="day">Sáb 25</div>
+                        <div class="temp">31-38°C</div>
+                        <div class="condition">☀️ Soleado</div>
+                    </div>
+                    <div class="weather-day">
+                        <div class="day">Dom 26</div>
+                        <div class="temp">30-36°C</div>
+                        <div class="condition">⛅ Parcial nublado</div>
+                    </div>
+                    <div class="weather-day">
+                        <div class="day">Lun 27</div>
+                        <div class="temp">31-37°C</div>
+                        <div class="condition">☀️ Soleado</div>
+                    </div>
+                    <div class="weather-day">
+                        <div class="day">Mar 28</div>
+                        <div class="temp">32-38°C</div>
+                        <div class="condition">☀️ Soleado</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-title">📰 Fuentes de Noticias</div>
+            <div class="card-body">
+                <ul class="news-list">
+                    <li>
+                        <div class="news-item">
+                            <span class="news-icon">📰</span>
+                            <span class="news-text">Diario de Yucatán - yucatan.com.mx</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="news-item">
+                            <span class="news-icon">📰</span>
+                            <span class="news-text">Reporteros Hoy - reporteroshoy.mx</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="news-item">
+                            <span class="news-icon">📰</span>
+                            <span class="news-text">Grupo Eclipse - grupoeclipse.com.mx</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="news-item">
+                            <span class="news-icon">📰</span>
+                            <span class="news-text">El Momento Yucatán - elmomentoyucatan.mx</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            ✨ Generado por Mission Control | DaCodes
+        </div>
+    </div>
+</body>
+</html>
